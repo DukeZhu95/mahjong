@@ -42,6 +42,7 @@ function SichuanMahjongRules() {
                 <p>四川麻将的胡牌方式多样。以下是详细的胡牌类型：<br/> There are many kinds of wining types in Sichuan Mahjong, here are the details: </p>
                 <ul>
                     <li>平胡：最基本的胡牌类型，牌中包含至少一组顺子即为平胡。</li>
+                    <commonHand /> {/* 在这里插入 commonHand 组件 */}
                     <li>碰碰胡（大对子）：较为常见的胡牌类型，牌中没有顺子即为碰碰胡。</li>
                     <li>清一色：胡牌时所有牌都是同一花色。</li>
                     <li>七对子：胡牌时牌中有七对牌。</li>
@@ -76,7 +77,6 @@ function SichuanMahjongRules() {
                 <p>常见的计番方式如下：</p>
                 <ul>
                 <li>平胡：1番。</li>
-                    <commonHand /> {/* 在这里插入 Pinghu 组件 */}
                     <li>碰碰胡：2番。</li>
                     <li>清一色：3番。</li>
                     <li>七对子：3番。</li>
