@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import dicesImage from './Images/Dices.png';
 import CommonHand from './commonHand';
+import CommonHand2 from "./commonHand2";
+import AllTriplets from "./allTriplets";
+import PureOneSuit from "./pureOneSuit";
+import SevenPairs from "./sevenPairs";
+import MeldedHand from "./meldedHand";
 
 function SichuanMahjongRules() {
     return (
@@ -42,11 +47,16 @@ function SichuanMahjongRules() {
                 <p>四川麻将的胡牌方式多样。以下是详细的胡牌类型：<br/> There are many kinds of wining types in Sichuan Mahjong, here are the details: </p>
                 <ul>
                     <li>平胡：最基本的胡牌类型，牌中包含至少一组顺子即为平胡。</li>
-                    <commonHand /> {/* 在这里插入 commonHand 组件 */}
+                    <CommonHand /> {/* 在这里插入 commonHand 组件 */}
+                    <CommonHand2 /> {/* 在这里插入 commonHand2 组件 */}
                     <li>碰碰胡（大对子）：较为常见的胡牌类型，牌中没有顺子即为碰碰胡。</li>
+                    <AllTriplets /> {/* 在这里插入 allTriplets 组件 */}
                     <li>清一色：胡牌时所有牌都是同一花色。</li>
+                    <PureOneSuit /> {/* 在这里插入 pureOneSuit 组件 */}
                     <li>七对子：胡牌时牌中有七对牌。</li>
+                    <SevenPairs /> {/* 在这里插入 sevenPairs 组件 */}
                     <li>金钩钓：所有的牌均已碰出、杠出，仅剩一张单钓胡牌。</li>
+                    <MeldedHand /> {/* 在这里插入 meldedHand 组件 */}
                     <li>清对：清一色 + 碰碰胡组成的胡牌</li>
                     <li>将对：碰碰胡的胡牌形态，且全部都由“2、5、8”数字组成。</li>
                     <li>龙七对：七对子的胡牌形态，其中有四张相同的牌，不另计根数。</li>

@@ -1,23 +1,21 @@
 import React from 'react';
-import MJw2 from './Images/MJw2.png';
+import MJw1 from './Images/MJw1.png';
 import MJw3 from './Images/MJw3.png';
-import MJw4 from './Images/MJw4.png';
 import MJw6 from './Images/MJw6.png';
-import MJs7 from './Images/MJt1.png';
-import MJs8 from './Images/MJt2.png';
-import MJs9 from './Images/MJt3.png';
-import MJt4 from './Images/MJt4.png';
+import MJt2 from './Images/MJt2.png';
 import MJt5 from './Images/MJt5.png';
-import MJt6 from './Images/MJt6.png';
-import MJt2 from './Images/MJt8.png';
+import MJt7 from './Images/MJt7.png';
+import MJt8 from './Images/MJt8.png';
 
-function CommonHand() {
+function SevenPairs() {
     const tiles = [
-        MJw2, MJw3, MJw4,  // 顺子
-        MJw6, MJw6, MJw6,  // 刻子
-        MJs7, MJs8, MJs9,  // 顺子
-        MJt4, MJt5, MJt6,  // 顺子
-        MJt2, MJt2  // 对子
+        MJw1, MJw1, // 对子
+        MJw3, MJw3, // 对子
+        MJw6, MJw6, // 对子
+        MJt2, MJt2, // 对子
+        MJt5, MJt5,  // 对子
+        MJt7, MJt7, // 对子
+        MJt8, MJt8, // 对子
     ];
 
     const styles = {
@@ -48,4 +46,4 @@ function CommonHand() {
     );
 }
 
-export default CommonHand;
+export default SevenPairs;

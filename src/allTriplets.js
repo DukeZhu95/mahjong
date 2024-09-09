@@ -1,23 +1,17 @@
 import React from 'react';
-import MJw2 from './Images/MJw2.png';
-import MJw3 from './Images/MJw3.png';
-import MJw4 from './Images/MJw4.png';
-import MJw6 from './Images/MJw6.png';
-import MJs7 from './Images/MJt1.png';
-import MJs8 from './Images/MJt2.png';
-import MJs9 from './Images/MJt3.png';
+import MJw5 from './Images/MJw5.png';
+import MJw7 from './Images/MJw7.png';
+import MJt3 from './Images/MJt3.png';
 import MJt4 from './Images/MJt4.png';
-import MJt5 from './Images/MJt5.png';
-import MJt6 from './Images/MJt6.png';
-import MJt2 from './Images/MJt8.png';
+import MJw8 from './Images/MJw8.png';
 
-function CommonHand() {
+function AllTriplets() {
     const tiles = [
-        MJw2, MJw3, MJw4,  // 顺子
-        MJw6, MJw6, MJw6,  // 刻子
-        MJs7, MJs8, MJs9,  // 顺子
-        MJt4, MJt5, MJt6,  // 顺子
-        MJt2, MJt2  // 对子
+        MJw5, MJw5, MJw5,  // 刻子
+        MJw7, MJw7, MJw7,  // 刻子
+        MJt3, MJt3, MJt3,  // 刻子
+        MJt4, MJt4, MJt4,  // 刻子
+        MJw8, MJw8  // 对子
     ];
 
     const styles = {
@@ -48,4 +42,4 @@ function CommonHand() {
     );
 }
 
-export default CommonHand;
+export default AllTriplets;
