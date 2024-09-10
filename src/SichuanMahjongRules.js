@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import dicesImage from './Images/Dices.png';
 import CommonHand from './commonHand';
 import CommonHand2 from "./commonHand2";
@@ -8,6 +8,14 @@ import SevenPairs from "./sevenPairs";
 import MeldedHand from "./meldedHand";
 import PureTriplets from "./pureTriplets";
 import ConcealedSevenPairs from "./concealedSevenPairs";
+import PureSevenPairs from "./pureSevenPairs";
+import PureMeldedHand from "./pureMeldedHand";
+import DoubleConcealedSevenPairs from "./doubleConcealedSevenPairs";
+import PureConcealedSevenPairs from "./pureConcealedSevenPairs";
+import PureGreenHand from "./pureGreenHand";
+import FourKongs from "./fourKongs";
+import SevenShiftedPairs from "./sevenShiftedPairs";
+import NineGates from "./nineGates";
 
 function SichuanMahjongRules() {
     return (
@@ -122,36 +130,74 @@ function SichuanMahjongRules() {
                 <p>四川麻将的胡牌方式多样。以下是详细的胡牌类型：<br/> There are many kinds of wining types in Sichuan Mahjong, here are the details: </p>
                 <ul>
                     <li>平胡：最基本的胡牌类型，牌中包含至少一组顺子即为平胡。</li>
-                    <CommonHand /> {/* 在这里插入 commonHand 组件 */}
-                    <CommonHand2 /> {/* 在这里插入 commonHand2 组件 */}
+                    <CommonHand/> {/* 在这里插入 commonHand 组件 */}
+                    <CommonHand2/> {/* 在这里插入 commonHand2 组件 */}
+                    <br></br>
+
                     <li>碰碰胡（大对子）：较为常见的胡牌类型，牌中没有顺子即为碰碰胡。</li>
-                    <AllTriplets /> {/* 在这里插入 allTriplets 组件 */}
+                    <AllTriplets/> {/* 在这里插入 allTriplets 组件 */}
+                    <br></br>
+
                     <li>清一色：胡牌时所有牌都是同一花色。</li>
-                    <PureOneSuit /> {/* 在这里插入 pureOneSuit 组件 */}
+                    <PureOneSuit/> {/* 在这里插入 pureOneSuit 组件 */}
+                    <br></br>
+
                     <li>七对子：胡牌时牌中有七对牌。</li>
-                    <SevenPairs /> {/* 在这里插入 sevenPairs 组件 */}
+                    <SevenPairs/> {/* 在这里插入 sevenPairs 组件 */}
+                    <br></br>
+
                     <li>金钩钓：所有的牌均已碰出、杠出，仅剩一张单钓胡牌。</li>
-                    <MeldedHand /> {/* 在这里插入 meldedHand 组件 */}
+                    <MeldedHand/> {/* 在这里插入 meldedHand 组件 */}
+                    <br></br>
+
                     <li>清对：清一色 + 碰碰胡组成的胡牌</li>
-                    <PureTriplets /> {/* 在这里插入 pureTriplets 组件 */}
+                    <PureTriplets/> {/* 在这里插入 pureTriplets 组件 */}
+                    <br></br>
+
                     {/*<li>将对：碰碰胡的胡牌形态，且全部都由“2、5、8”数字组成。</li>*/}
+
                     <li>龙七对：七对子的胡牌形态，其中有四张相同的牌，不另计根数。</li>
-                    <ConcealedSevenPairs /> {/* 在这里插入 concealedSevenPairs 组件 */}
+                    <ConcealedSevenPairs/> {/* 在这里插入 concealedSevenPairs 组件 */}
+                    <br></br>
+
                     <li>清七对：清一色 + 七对子组成的胡牌。</li>
+                    <PureSevenPairs/> {/* 在这里插入 pureSevenPairs 组件 */}
+                    <br></br>
+
                     <li>清金钩钓：清一色 + 碰碰胡组成的胡牌。</li>
+                    <PureMeldedHand/> {/* 在这里插入 pureMeldedHand 组件 */}
+                    <br></br>
+
                     <li>双龙七对：七对子的胡牌形态，其中有两组四张相同的牌，不另计根数。</li>
+                    <DoubleConcealedSevenPairs/> {/* 在这里插入 doubleConcealedSevenPairs 组件 */}
+                    <br></br>
+
                     <li>清龙七对：七对子 + 清一色的胡牌形态，其中有两组四张相同的牌，不另计根数与清一色。</li>
+                    <PureConcealedSevenPairs/> {/* 在这里插入 pureConcealedSevenPairs 组件 */}
+                    <br></br>
                 </ul>
 
                 <p>以下为极品牌型，一般情况下一律按封顶番数计算：</p>
                 <ul>
                     <li>绿一色：仅使用二、三、四、六、八条组成的胡牌形态，不另计清一色。</li>
+                    <PureGreenHand/> {/* 在这里插入 pureGreenHand 组件 */}
+                    <br></br>
+
                     <li>十八罗汉：胡牌时有四个杠，不另计金钩钓。</li>
+                    <FourKongs/> {/* 在这里插入 fourKongs 组件 */}
+                    <br></br>
+
                     <li>连七对：由数字连续的七对子组成的胡牌，不另计清一色与七对子。</li>
+                    <SevenShiftedPairs/> {/* 在这里插入 sevenShiftedPairs 组件 */}
+                    <br></br>
+
                     <li>九莲宝灯：由“1112345678999”另加任意一张相同花色的牌组成的胡牌形态，不另计清一色。</li>
+                    <NineGates/> {/* 在这里插入 nineGates 组件 */}
                     <li>三龙七对：七对子的胡牌形态，其中有三组四张相同的牌，不另计根数。</li>
                     <li>清双龙七对：双龙七对 + 清一色的胡牌形态，其中有两组四张相同的牌，不另计根数。</li>
                     <li>清三龙七对：三龙七对 + 清一色的胡牌形态，其中有三组四张相同的牌，不另计根数。</li>
+                    <li>天胡：庄家唯一的特权，一局游戏开始时，在起牌后发现手牌已满足胡牌条件，即可立即宣布胡牌，不另计自摸加底。</li>
+                    <li>地胡：子家唯一的特权，一局游戏开始时，在起牌后发现手牌已听牌，牌局开始一圈内庄家点炮或自摸都可算作地胡，不另计自摸加底。</li>
                 </ul>
             </section>
 
@@ -179,7 +225,7 @@ function SichuanMahjongRules() {
                     <li>刮风（明杠）：当玩家持有一组刻子，其他任一玩家打出第四章牌时，则可立即杠牌，点杠玩家须立即结算2番给杠牌玩家。</li>
                     <li>刮风（弯杠）：当玩家碰牌后，在自己的摸牌阶段又摸到第四章牌时，则可立即杠牌，场上所有未胡牌玩家须立即结算1番给杠牌玩家（注：若弯杠的牌并非当前摸牌阶段所得，则不进行刮风下雨结算）</li>
                     <li>下雨（暗杠）：当玩家持有一组刻子，在自己的摸牌阶段又摸到第四章牌时，则可立即杠牌，场上所有未胡牌玩家须立即结算2番给杠牌玩家（注：与其他地区玩法不同，四川麻将暗杠须明牌展示）。</li>
-                    <li>退税：</li>
+                    <li>退税：流局查叫阶段中，未听牌玩家须退回本局刮风（明杠、弯杠）所得（下雨不用退税）</li>
                 </ul>
 
                 <p>附加计番：</p>
