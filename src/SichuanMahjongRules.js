@@ -16,6 +16,8 @@ import PureGreenHand from "./pureGreenHand";
 import FourKongs from "./fourKongs";
 import SevenShiftedPairs from "./sevenShiftedPairs";
 import NineGates from "./nineGates";
+import Example1 from "./example1";
+import Example2 from "./example2";
 
 function SichuanMahjongRules() {
     return (
@@ -81,6 +83,14 @@ function SichuanMahjongRules() {
                         wins first.
                     </li>
                     <br></br>
+                    <li>
+                        胡牌条件：当玩家手中的牌满足[4 * a + b]的条件（其中a为三张一组的刻子或顺子，b为一组对子）时，即可胡牌，例如：
+                        <br/> Winning condition: When a player's hand meets the condition of [4 * a + b] (where a is a
+                        triplet or a sequence of three tiles, and b is a pair), the player can win, for example:
+                        <Example1/>
+                        <Example2/>
+                    </li>
+                    <br></br>
                     <li>一炮多响：当一名玩家打出的牌被多名玩家胡牌时，称为一炮多响。一炮多响时，所有胡牌玩家的番数相加并由点炮玩家支付（注：
                         若此一炮多响为该局游戏的首次胡牌，则下局游戏由点炮玩家坐庄）。
                         <br/> Multiple winners: When a tile discarded by a player is won by multiple players, it is
@@ -97,7 +107,7 @@ function SichuanMahjongRules() {
                         为“小相公”；超过14章为“大相公”）。相公玩家不得更改当前的牌数，需继续游戏直至所有其他玩家胡牌或流局；相公玩家无法听牌
                         、胡牌，但仍可碰牌、杠牌。
                         <br/> Dead Hand: Normally, each player has 14 tiles after the draw stage, if a player has
-                        less/more  than 14 tiles, it is called a Dead Hand (less than 14 tiles is called "Small Dead
+                        less/more than 14 tiles, it is called a Dead Hand (less than 14 tiles is called "Small Dead
                         Hand"; more than 14 tiles is called "Big Dead Hand"). Dead Hand player cannot change the number
                         of tiles, must continue the game until all other players win or drawn; Dead Hand player cannot
                         Ready hand or win, but still can Pong or Kong.
@@ -156,7 +166,7 @@ function SichuanMahjongRules() {
 
                     {/*<li>将对：碰碰胡的胡牌形态，且全部都由“2、5、8”数字组成。</li>*/}
 
-                    <li>龙七对：七对子的胡牌形态，其中有四张相同的牌，不另计根数。</li>
+                    <li>龙七对：七对子的胡牌形态，其中有四张相同的牌（不得杠出），不另计根数。</li>
                     <ConcealedSevenPairs/> {/* 在这里插入 concealedSevenPairs 组件 */}
                     <br></br>
 

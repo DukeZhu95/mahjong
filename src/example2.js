@@ -1,17 +1,17 @@
 import React from 'react';
-import MJs1 from './Images/MJs1.png';
-import MJs3 from './Images/MJs3.png';
-import MJs5 from './Images/MJs5.png';
-import MJs6 from './Images/MJs6.png';
-import MJs7 from './Images/MJs7.png';
+import MJw4 from './Images/MJw4.png';
+import MJw9 from './Images/MJw9.png';
+import MJt2 from './Images/MJt2.png';
+import MJt5 from './Images/MJt5.png';
+import MJt9 from './Images/MJt9.png';
 
-function PureTriplets() {
+function Example2() {
     const tiles = [
-        MJs1, MJs1, MJs1,  // 刻子
-        MJs3, MJs3, MJs3,  // 刻子
-        MJs5, MJs5, MJs5,  // 刻子
-        MJs6, MJs6, MJs6,  // 刻子
-        MJs7, MJs7  // 对子
+        MJw4, MJw4, MJw4,  // 刻子
+        MJw9, MJw9, MJw9,  // 刻子
+        MJt2, MJt2, MJt2,  // 刻子
+        MJt5, MJt5, MJt5,  // 刻子
+        MJt9, MJt9  // 对子
     ];
 
     const styles = {
@@ -53,4 +53,4 @@ function PureTriplets() {
     );
 }
 
-export default PureTriplets;
+export default Example2;
