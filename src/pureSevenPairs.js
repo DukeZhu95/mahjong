@@ -19,29 +19,40 @@ function PureSevenPairs() {
     ];
 
     const styles = {
+        outerContainer: {
+            width: '100%',
+            overflowX: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+        },
         container: {
             display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginTop: '10px'
+            flexWrap: 'nowrap',
+            justifyContent: 'flex-start',
+            marginTop: '10px',
+            paddingBottom: '10px', // 为移动端滚动条预留空间
         },
         tile: {
-            width: '40px', // 根据你图片的大小进行调整
+            width: '40px',
             height: 'auto',
-            margin: '2px'
+            margin: '2px',
+            flexShrink: 0, // 防止图片被压缩
         }
     };
 
     return (
-        <div style={styles.container}>
-            {tiles.map((tile, index) => (
-                <img
-                    key={index}
-                    src={tile}
-                    alt={`麻将${index}`}
-                    style={styles.tile}
-                />
-            ))}
+        <div style={styles.outerContainer}>
+            <div style={styles.container}>
+                {tiles.map((tile, index) => (
+                    <img
+                        key={index}
+                        src={tile}
+                        alt={`麻将${index}`}
+                        style={styles.tile}
+                    />
+                ))}
+            </div>
         </div>
     );
 }

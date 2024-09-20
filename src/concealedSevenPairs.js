@@ -10,37 +10,59 @@ function ConcealedSevenPairs() {
     const tiles = [
         MJw2, MJw2, // 对子
         MJw3, MJw3, // 对子
-        MJw4, MJw4, // 对子
-        MJw4, MJw4, // 对子
+        MJw4, MJw4, MJw4, MJw4, // 四张相同的牌
         MJs2, MJs2,  // 对子
         MJs5, MJs5, // 对子
         MJs8, MJs8, // 对子
     ];
 
     const styles = {
+        outerContainer: {
+            width: '100%',
+            maxWidth: '800px',
+            margin: '0 auto',
+            overflowX: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'thin',
+            msOverflowStyle: 'auto',
+        },
         container: {
             display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginTop: '10px'
+            flexWrap: 'nowrap',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            marginTop: '10px',
+            paddingBottom: '10px',
         },
         tile: {
-            width: '40px', // 根据你图片的大小进行调整
+            width: '40px',
             height: 'auto',
-            margin: '2px'
+            margin: '2px',
+            flexShrink: 0,
+        },
+        text: {
+            fontSize: '14px',
+            color: 'red',
+            marginLeft: '10px',
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
         }
     };
 
     return (
-        <div style={styles.container}>
-            {tiles.map((tile, index) => (
-                <img
-                    key={index}
-                    src={tile}
-                    alt={`麻将${index}`}
-                    style={styles.tile}
-                />
-            ))}
+        <div style={styles.outerContainer}>
+            <div style={styles.container}>
+                {tiles.map((tile, index) => (
+                    <React.Fragment key={index}>
+                        <img
+                            src={tile}
+                            alt={`麻将${index}`}
+                            style={styles.tile}
+                        />
+                        {index === 7 && <span style={styles.text}>（👈不可杠出）</span>}
+                    </React.Fragment>
+                ))}
+            </div>
         </div>
     );
 }

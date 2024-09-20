@@ -139,75 +139,124 @@ function SichuanMahjongRules() {
                 <h2 style={styles.subtitle}>二、胡牌规则 <br/> 2. Rules of Wining</h2>
                 <p>四川麻将的胡牌方式多样。以下是详细的胡牌类型：<br/> There are many kinds of wining types in Sichuan Mahjong, here are the details: </p>
                 <ul>
-                    <li>平胡：最基本的胡牌类型，牌中包含至少一组顺子即为平胡。</li>
+                    <li>平胡：最基本的胡牌类型，牌中包含至少一组顺子即为平胡。
+                        <br/> Common Hand: The most basic wining type, the hand contains at least one sequence.
+                    </li>
                     <CommonHand/> {/* 在这里插入 commonHand 组件 */}
                     <CommonHand2/> {/* 在这里插入 commonHand2 组件 */}
                     <br></br>
 
-                    <li>碰碰胡（大对子）：较为常见的胡牌类型，牌中没有顺子即为碰碰胡。</li>
+                    <li>碰碰胡（大对子）：较为常见的胡牌类型，牌中没有顺子即为碰碰胡。
+                        <br/> All Triplets: A common wining type, the hand does not contain any sequence.
+                    </li>
                     <AllTriplets/> {/* 在这里插入 allTriplets 组件 */}
                     <br></br>
 
-                    <li>清一色：胡牌时所有牌都是同一花色。</li>
+                    <li>清一色：胡牌时所有牌都是同一花色。
+                        <br/> Pure One Suit: All tiles in the hand are of the same suit.
+                    </li>
                     <PureOneSuit/> {/* 在这里插入 pureOneSuit 组件 */}
                     <br></br>
 
-                    <li>七对子：胡牌时牌中有七对牌。</li>
+                    <li>七对子：胡牌时牌中有七对牌。
+                        <br/> Seven Pairs: The hand contains seven pairs.
+                    </li>
                     <SevenPairs/> {/* 在这里插入 sevenPairs 组件 */}
                     <br></br>
 
-                    <li>金钩钓：所有的牌均已碰出、杠出，仅剩一张单钓胡牌。</li>
+                    <li>金钩钓：所有的牌均已碰出或杠出，仅剩一张单钓胡牌。
+                        <br/> Melded Hand: All tiles in the hand are Ponged or Konged, and the hand contains only one
+                        pair.
+                    </li>
                     <MeldedHand/> {/* 在这里插入 meldedHand 组件 */}
                     <br></br>
 
-                    <li>清对：清一色 + 碰碰胡组成的胡牌</li>
+                    <li>清对：清一色 + 碰碰胡组成的胡牌
+                        <br/> Pure Triplets: Pure One Suit + All Triplets.
+                    </li>
                     <PureTriplets/> {/* 在这里插入 pureTriplets 组件 */}
                     <br></br>
 
                     {/*<li>将对：碰碰胡的胡牌形态，且全部都由“2、5、8”数字组成。</li>*/}
 
-                    <li>龙七对：七对子的胡牌形态，其中有四张相同的牌（不得杠出），不另计根数。</li>
+                    <li>龙七对：七对子的胡牌形态，其中有四张相同的牌（不得杠出），不另计根数。
+                        <br/> Concealed Seven Pairs: The hand contains seven pairs, and there are four identical tiles
+                        (cannot be Konged), the point of the root cannot be additionally counted.
+                    </li>
                     <ConcealedSevenPairs/> {/* 在这里插入 concealedSevenPairs 组件 */}
                     <br></br>
 
-                    <li>清七对：清一色 + 七对子组成的胡牌。</li>
+                    <li>清七对：清一色 + 七对子组成的胡牌。
+                        <br/> Pure Seven Pairs: Pure One Suit + Seven Pairs.
+                    </li>
                     <PureSevenPairs/> {/* 在这里插入 pureSevenPairs 组件 */}
                     <br></br>
 
-                    <li>清金钩钓：清一色 + 碰碰胡组成的胡牌。</li>
+                    <li>清金钩钓：清一色 + 碰碰胡组成的胡牌。
+                        <br/> Pure Melded Hand: Pure One Suit + Melded Hand.
+                    </li>
                     <PureMeldedHand/> {/* 在这里插入 pureMeldedHand 组件 */}
                     <br></br>
 
-                    <li>双龙七对：七对子的胡牌形态，其中有两组四张相同的牌，不另计根数。</li>
+                    <li>双龙七对：七对子的胡牌形态，其中有两组四张相同的牌，不另计根数。
+                        <br/> Double Concealed Seven Pairs: The hand contains seven pairs, and there are two groups of
+                        four identical tiles, the point of roots cannot be additionally counted.
+                    </li>
                     <DoubleConcealedSevenPairs/> {/* 在这里插入 doubleConcealedSevenPairs 组件 */}
                     <br></br>
 
-                    <li>清龙七对：七对子 + 清一色的胡牌形态，其中有两组四张相同的牌，不另计根数与清一色。</li>
+                    <li>清龙七对：七对子 + 清一色的胡牌形态，其中有两组四张相同的牌，不另计根数与清一色。
+                        <br/> Pure Concealed Seven Pairs: Seven Pairs + Pure One Suit, the hand contains two groups of
+                        four identical tiles, the point of roots and Pure One Suit cannot be additionally counted.
+                    </li>
                     <PureConcealedSevenPairs/> {/* 在这里插入 pureConcealedSevenPairs 组件 */}
                     <br></br>
                 </ul>
 
-                <p>以下为极品牌型，一般情况下一律按封顶番数计算：</p>
+                <p>以下为极品牌型，一般情况下一律按封顶番数计算：
+                    <br/> The following are special wining types, usually calculated as the maximum points:
+                </p>
                 <ul>
-                    <li>绿一色：仅使用二、三、四、六、八条组成的胡牌形态，不另计清一色。</li>
+                    <li>绿一色：仅使用二、三、四、六、八条组成的胡牌形态，不另计清一色。
+                        <br/> Pure Green Hand: The hand contains only 2, 3, 4, 6, 8 of Bamboo, the point of Pure One
+                        Suit cannot be additionally counted.
+                    </li>
                     <PureGreenHand/> {/* 在这里插入 pureGreenHand 组件 */}
                     <br></br>
 
-                    <li>十八罗汉：胡牌时有四个杠，不另计金钩钓。</li>
+                    <li>十八罗汉：胡牌时有四个杠，不另计金钩钓。
+                        <br/> Four Kongs: The hand contains four Kongs, the point of Melded Hand cannot be additionally
+                        counted.
+                    </li>
                     <FourKongs/> {/* 在这里插入 fourKongs 组件 */}
                     <br></br>
 
-                    <li>连七对：由数字连续的七对子组成的胡牌，不另计清一色与七对子。</li>
+                    <li>连七对：由数字连续的七对子组成的胡牌，不另计清一色与七对子。
+                        <br/> Seven Shifted Pairs:
+                    </li>
                     <SevenShiftedPairs/> {/* 在这里插入 sevenShiftedPairs 组件 */}
                     <br></br>
 
-                    <li>九莲宝灯：由“1112345678999”另加任意一张相同花色的牌组成的胡牌形态，不另计清一色。</li>
+                    <li>九莲宝灯：由“1112345678999”另加任意一张相同花色的牌组成的胡牌形态，不另计清一色。
+
+                    </li>
                     <NineGates/> {/* 在这里插入 nineGates 组件 */}
+                    <br></br>
+
                     <li>三龙七对：七对子的胡牌形态，其中有三组四张相同的牌，不另计根数。</li>
+                    <br></br>
+
                     <li>清双龙七对：双龙七对 + 清一色的胡牌形态，其中有两组四张相同的牌，不另计根数。</li>
+                    <br></br>
+
                     <li>清三龙七对：三龙七对 + 清一色的胡牌形态，其中有三组四张相同的牌，不另计根数。</li>
+                    <br></br>
+
                     <li>天胡：庄家唯一的特权，一局游戏开始时，在起牌后发现手牌已满足胡牌条件，即可立即宣布胡牌，不另计自摸加底。</li>
+                    <br></br>
+
                     <li>地胡：子家唯一的特权，一局游戏开始时，在起牌后发现手牌已听牌，牌局开始一圈内庄家点炮或自摸都可算作地胡，不另计自摸加底。</li>
+                    <br></br>
                 </ul>
             </section>
 
