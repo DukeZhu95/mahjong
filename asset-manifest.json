@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mahjong/static/css/main.e6c13ad2.css",
-    "main.js": "/mahjong/static/js/main.bd85250a.js",
+    "main.css": "/mahjong/static/css/main.a91a94ad.css",
+    "main.js": "/mahjong/static/js/main.66d50116.js",
     "static/js/453.8214c2f8.chunk.js": "/mahjong/static/js/453.8214c2f8.chunk.js",
     "static/media/Dices.png": "/mahjong/static/media/Dices.7256c130d1123b7674e6.png",
     "static/media/MJs1.png": "/mahjong/static/media/MJs1.f43c2d6fc0f425c78817.png",
@@ -14,12 +14,12 @@
     "static/media/MJs9.png": "/mahjong/static/media/MJs9.90d028cfc113d63d8e59.png",
     "static/media/MJt8.png": "/mahjong/static/media/MJt8.ae209f6c613cc459f75b.png",
     "index.html": "/mahjong/index.html",
-    "main.e6c13ad2.css.map": "/mahjong/static/css/main.e6c13ad2.css.map",
-    "main.bd85250a.js.map": "/mahjong/static/js/main.bd85250a.js.map",
+    "main.a91a94ad.css.map": "/mahjong/static/css/main.a91a94ad.css.map",
+    "main.66d50116.js.map": "/mahjong/static/js/main.66d50116.js.map",
     "453.8214c2f8.chunk.js.map": "/mahjong/static/js/453.8214c2f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.bd85250a.js"
+    "static/css/main.a91a94ad.css",
+    "static/js/main.66d50116.js"
   ]
 }
