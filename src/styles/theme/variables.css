@@ -1,0 +1,16 @@
+:root {
+    /* 原有的变量 */
+    --primary-color: #b22222;
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --background-color: #f5f5f5;
+    --container-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --section-spacing: 30px;
+
+    /* 添加字体变量 */
+    --chinese-font: "Microsoft YaHei", "微软雅黑", sans-serif;
+    --english-title-font: "Playfair Display", serif;
+    --english-text-font: "Crimson Text", serif;
+    --english-subtitle-font: "Roboto Slab", serif;
+}

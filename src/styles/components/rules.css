@@ -1,0 +1,272 @@
+.mahjong-rules {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--container-background);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.mahjong-image {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.mahjong-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: var(--section-spacing);
+}
+
+.mahjong-title-cn {
+    font-family: var(--chinese-font), serif;
+    margin-bottom: 10px;
+}
+
+.mahjong-title-en {
+    font-family: var(--english-title-font), serif;
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+.mahjong-subtitle {
+    color: var(--primary-color);
+    margin-top: var(--section-spacing);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.mahjong-subtitle-cn {
+    font-family: var(--chinese-font), serif;
+    font-size: 1.5em;
+}
+
+.mahjong-subtitle-en {
+    font-family: var(--english-subtitle-font), serif;
+    font-size: 1.2em;
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+}
+
+.mahjong-content {
+    font-family: var(--chinese-font), serif;
+    line-height: 1.6;
+}
+
+.english-text {
+    font-family: var(--english-text-font), serif;
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.mahjong-list-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.mahjong-list-item-cn {
+    font-family: var(--chinese-font), serif;
+}
+
+.mahjong-list-item-en {
+    font-family: var(--english-text-font), serif;
+    color: var(--secondary-text-color);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* 列表样式 */
+.mahjong-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mahjong-list-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 3px solid var(--primary-color);
+    background-color: rgba(178, 34, 34, 0.03);
+    border-radius: 0 4px 4px 0;
+}
+
+/* 计分公式样式 */
+.point-formula {
+    background-color: rgba(178, 34, 34, 0.05);
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.point-formula sup {
+    font-size: 0.8em;
+}
+
+/* 子标题样式 */
+.mahjong-subheading {
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.mahjong-subheading-cn {
+    font-family: var(--chinese-font), serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.mahjong-subheading-en {
+    font-family: var(--english-text-font), serif;
+    color: var(--secondary-text-color);
+    font-style: italic;
+}
+
+/* 点数列表特殊样式 */
+.points-list .mahjong-list-item {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+.points-list .mahjong-list-item-cn,
+.points-list .mahjong-list-item-en {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* 章节样式 */
+.mahjong-section {
+    margin-bottom: 40px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .mahjong-rules {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .mahjong-title {
+        font-size: 1.6em;
+    }
+
+    .mahjong-subtitle-cn {
+        font-size: 1.3em;
+    }
+
+    .mahjong-subtitle-en {
+        font-size: 1em;
+    }
+
+    .mahjong-image {
+        max-width: 40%;
+    }
+
+    .mahjong-list-item {
+        padding: 10px;
+    }
+}
+
+/* 链接样式 */
+.mahjong-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mahjong-link:hover {
+    color: var(--secondary-text-color);
+}
+
+/* 补充内容样式 */
+.note-text {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* 动画效果 */
+/* 在 rules.css 中修改动画定义 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);  /* 增加移动距离 */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 为列表项添加动画，并添加延迟效果 */
+.mahjong-list-item {
+    animation: fadeIn 0.8s ease-out;
+    opacity: 0;  /* 初始状态设为透明 */
+    animation-fill-mode: forwards;  /* 保持动画最终状态 */
+}
+
+/* 为列表项添加依次出现的延迟 */
+.mahjong-list-item:nth-child(1) { animation-delay: 0.1s; }
+.mahjong-list-item:nth-child(2) { animation-delay: 0.2s; }
+.mahjong-list-item:nth-child(3) { animation-delay: 0.3s; }
+.mahjong-list-item:nth-child(4) { animation-delay: 0.4s; }
+.mahjong-list-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mahjong-title {
+    animation: slideIn 1s ease-out;
+}
+
+.mahjong-subtitle {
+    animation: slideIn 1s ease-out;
+    animation-delay: 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes imageAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.mahjong-image {
+    animation: imageAppear 1s ease-out;
+}
+
+.mahjong-list-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mahjong-list-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mahjong-image {
+    transition: transform 0.3s ease;
+}
+
+.mahjong-image:hover {
+    transform: scale(1.05);
+}
