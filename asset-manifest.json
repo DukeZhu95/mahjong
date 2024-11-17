@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mahjong/static/css/main.e6c13ad2.css",
+    "main.js": "/mahjong/static/js/main.bd85250a.js",
+    "static/js/453.8214c2f8.chunk.js": "/mahjong/static/js/453.8214c2f8.chunk.js",
+    "static/media/Dices.png": "/mahjong/static/media/Dices.7256c130d1123b7674e6.png",
+    "static/media/MJs1.png": "/mahjong/static/media/MJs1.f43c2d6fc0f425c78817.png",
+    "static/media/MJt9.png": "/mahjong/static/media/MJt9.c186634f9eee3cff4e13.png",
+    "static/media/MJt1.png": "/mahjong/static/media/MJt1.f95e9312ebd5c60a0ab6.png",
+    "static/media/MJt6.png": "/mahjong/static/media/MJt6.55a086a10be75a52e6fe.png",
+    "static/media/MJt7.png": "/mahjong/static/media/MJt7.7aa3a9fb18cd043db366.png",
+    "static/media/MJs8.png": "/mahjong/static/media/MJs8.1b42766164d4b57bba3a.png",
+    "static/media/MJt5.png": "/mahjong/static/media/MJt5.43836b0c3dfe64f6c095.png",
+    "static/media/MJs9.png": "/mahjong/static/media/MJs9.90d028cfc113d63d8e59.png",
+    "static/media/MJt8.png": "/mahjong/static/media/MJt8.ae209f6c613cc459f75b.png",
+    "index.html": "/mahjong/index.html",
+    "main.e6c13ad2.css.map": "/mahjong/static/css/main.e6c13ad2.css.map",
+    "main.bd85250a.js.map": "/mahjong/static/js/main.bd85250a.js.map",
+    "453.8214c2f8.chunk.js.map": "/mahjong/static/js/453.8214c2f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.bd85250a.js"
+  ]
+}
