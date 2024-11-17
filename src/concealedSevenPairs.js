@@ -59,7 +59,7 @@ function ConcealedSevenPairs() {
                             alt={`麻将${index}`}
                             style={styles.tile}
                         />
-                        {index === 7 && <span style={styles.text}>（👈不可杠出）</span>}
+                        {index === 7 && <span style={styles.text}>👈（不可杠出）<br/>(Must be concealed)</span>}
                     </React.Fragment>
                 ))}
             </div>

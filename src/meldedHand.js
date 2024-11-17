@@ -66,7 +66,7 @@ function MeldedHand() {
                     />
                 ))}
                 <div style={styles.spaceBetween}></div>
-                <span style={styles.text}>👈均已碰或杠出</span>
+                <span style={styles.text}>👈（均已碰或杠出）<br/>(All have been Ponged or Konged)</span>
                 <div style={styles.spaceBetween}></div>
                 {pairTiles.map((tile, index) => (
                     <img

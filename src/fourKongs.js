@@ -66,7 +66,7 @@ function FourKongs() {
                     />
                 ))}
                 <div style={styles.spaceBetween}></div>
-                <span style={styles.text}>👈均已杠出</span>
+                <span style={styles.text}>👈均已杠出<br/>All have been Konged</span>
                 <div style={styles.spaceBetween}></div>
                 {pairTiles.map((tile, index) => (
                     <img
