@@ -26,21 +26,38 @@ import Example2 from "./example2";
 function SichuanMahjongRules() {
     return (
         <div className="mahjong-rules">
+            {/* 添加导航菜单 */}
+            <nav className="mahjong-nav">
+                <ul className="nav-list">
+                    <li className="nav-item">
+                        <a href="#basic-rules" className="nav-link">基本规则</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#winning-rules" className="nav-link">胡牌规则</a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#scoring-rules" className="nav-link">计分规则</a>
+                    </li>
+                </ul>
+            </nav>
+
             <div className="mahjong-title">
-                <div className="mahjong-title-cn">四川麻将规则简介</div>
+                <div className="mahjong-title-cn">四川麻将玩法简介</div>
                 <div className="mahjong-title-en">Introduction of Sichuan Mahjong</div>
             </div>
 
-            <section className="mahjong-section">
-                <img src={dicesImage} alt="四川麻将" className="mahjong-image"/>
+            <img src={dicesImage} alt="四川麻将" className="mahjong-image"/>
+
+            <section id="basic-rules" className="mahjong-section">
                 <div className="mahjong-subtitle">
-                    <div className="mahjong-subtitle-cn">一、基本规则</div>
-                    <div className="mahjong-subtitle-en">1. Basic Rules</div>
+                    <div className="mahjong-subtitle-cn">基本规则</div>
+                    <div className="mahjong-subtitle-en">Basic Rules</div>
                 </div>
 
                 <div className="mahjong-content">
                     <p>
-                        <span className="mahjong-text-cn">四川麻将是一种流行于中国四川省的麻将玩法。以下是基本的游戏规则：</span>
+                        <span
+                            className="mahjong-text-cn">四川麻将是一种流行于中国四川省的麻将玩法。以下是基本的游戏规则：</span>
                         <span className="english-text">Sichuan Mahjong is a popular game in Sichuan province, China. Here are the basic rules:</span>
                     </p>
                     <ul className="mahjong-list">
@@ -204,10 +221,10 @@ function SichuanMahjongRules() {
                 </div>
             </section>
 
-            <section className="mahjong-section">
+            <section id="winning-rules" className="mahjong-section">
                 <div className="mahjong-subtitle">
-                    <div className="mahjong-subtitle-cn">二、胡牌规则</div>
-                    <div className="mahjong-subtitle-en">2. Rules of Winning</div>
+                    <div className="mahjong-subtitle-cn">胡牌规则</div>
+                    <div className="mahjong-subtitle-en">Rules of Winning</div>
                 </div>
 
                 <div className="mahjong-content">
@@ -419,10 +436,10 @@ function SichuanMahjongRules() {
                 </div>
             </section>
 
-            <section className="mahjong-section">
+            <section id="scoring-rules" className="mahjong-section">
                 <div className="mahjong-subtitle">
-                    <div className="mahjong-subtitle-cn">三、计分规则</div>
-                    <div className="mahjong-subtitle-en">3. Points Calculating</div>
+                    <div className="mahjong-subtitle-cn">计分规则</div>
+                    <div className="mahjong-subtitle-en">Points Calculating</div>
                 </div>
 
                 <div className="mahjong-content">
