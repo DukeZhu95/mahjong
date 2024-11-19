@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React, {useState} from 'react';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import TileIntroduction from './components/TileIntroduction';
 import BasicRules from './components/BasicRules';
@@ -8,9 +8,11 @@ import ScoringRules from './components/ScoringRules';
 import './styles/base/index.css';
 import './styles/components/rules.css';
 import ScrollToTop from "./components/ScrollToTop";
+import { Home as HomeIcon } from 'lucide-react';  // 导入Home图标
 
 // 创建导航栏组件
 function Navigation() {
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
     // 如果是首页，则不显示导航栏
@@ -19,27 +21,43 @@ function Navigation() {
     }
 
     return (
-        <nav className="main-nav">
-            <Link to="/" className="nav-logo">Home</Link>
-            <div className="nav-buttons">
-                <Link to="/tile-introduction" className="nav-button">
-                    <span className="button-text">Tiles Introduction</span>
-                    {/*<span className="button-subtext">Introduction</span>*/}
+        <div className="nav-container">
+            {/* 菜单按钮 */}
+            <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? '✕' : '☰'}
+            </button>
+
+            {/* 导航菜单 */}
+            <nav className={`main-nav ${isOpen ? 'nav-open' : ''}`}>
+                <Link to="/" className="nav-home" onClick={() => setIsOpen(false)}>
+                    <HomeIcon size={24} />
                 </Link>
-                <Link to="/basic-rules" className="nav-button">
-                    <span className="button-text">Basic Rules</span>
-                    {/*<span className="button-subtext">Rules</span>*/}
-                </Link>
-                <Link to="/winning-rules" className="nav-button">
-                    <span className="button-text">Winning Categories</span>
-                    {/*<span className="button-subtext">Rules</span>*/}
-                </Link>
-                <Link to="/scoring-rules" className="nav-button">
-                    <span className="button-text">Scoring Rules</span>
-                    {/*<span className="button-subtext">Rules</span>*/}
-                </Link>
-            </div>
-        </nav>
+
+                <div className="nav-buttons">
+                    <Link to="/tile-introduction" className="nav-button" onClick={() => setIsOpen(false)}>
+                        <span className="button-text">Tiles Introduction</span>
+                    </Link>
+                    <Link to="/basic-rules" className="nav-button" onClick={() => setIsOpen(false)}>
+                        <span className="button-text">Basic Rules</span>
+                    </Link>
+                    <Link to="/winning-rules" className="nav-button" onClick={() => setIsOpen(false)}>
+                        <span className="button-text">Winning Rules</span>
+                    </Link>
+                    <Link to="/scoring-rules" className="nav-button" onClick={() => setIsOpen(false)}>
+                        <span className="button-text">Scoring Rules</span>
+                    </Link>
+                </div>
+
+                {/* 添加底部图片 */}
+                <div className="nav-footer">
+                    <img
+                        src={require('./Images/red_dice.png')} // 使用您已有的图片
+                        alt="Mahjong"
+                        className="nav-footer-image"
+                    />
+                </div>
+            </nav>
+        </div>
     );
 }
 

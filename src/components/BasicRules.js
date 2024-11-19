@@ -42,7 +42,7 @@ function BasicRules() {
                     <li className="mahjong-list-item">
                         <div className="mahjong-list-item-cn">缺一门：每个玩家需要选择放弃一门花色，不能胡这一门的牌。
                         </div>
-                        <div className="mahjong-list-item-en">One void suit: Each player needs to select a suit to
+                        <div className="mahjong-list-item-en">One void suit: Each player needs to select a "forbidden suit" to
                             abandon in one round, this suit cannot be included when wins.
                         </div>
                     </li>
@@ -71,6 +71,39 @@ function BasicRules() {
                             and another player discards the third tile of the same kind, the player can choose to
                             “Pong”. The Ponged tiles must be shown on the table and cannot be taken back to the
                             hand. After Pong action, the game continues with the player who Ponged the tile.
+                        </div>
+                    </li>
+                    <br></br>
+                    <li className="mahjong-list-item">
+                        <div className="mahjong-list-item-cn">杠牌：当玩家：
+                            （1）手中持有一组刻子（三张相同的牌）时，其他任一玩家打出第四章相同的牌时，则可选择立即杠牌（称为明杠），
+                            杠出的牌须明牌展示在桌面上且不可拿回到手牌中进行组合。杠牌结束后，杠牌玩家须从牌墙中沿摸牌方向补一张牌至手牌中，
+                            并以杠牌玩家的出牌顺序开始继续进行游戏。
+                            （2）摸牌后，手中持有四章相同的牌时，则可选择立即杠牌（称为暗杠），杠出的牌须明牌展示在桌面上且不可拿回到手牌中进行组合。
+                            杠牌结束后，杠牌玩家须从牌墙中沿摸牌方向补一张牌至手牌中，并以杠牌玩家的出牌顺序开始继续进行游戏。
+                            （3）摸牌后，新摸到的牌恰巧为自己已有碰牌牌组的第四章牌，则可选择立即杠牌（称为弯杠或加杠），杠出的牌须补至
+                            对应碰牌中并明牌展示在桌面上且不可拿回到手牌中进行组合。杠牌结束后，杠牌玩家须从牌墙中沿摸牌方向补一张牌至手牌中，
+                            并以杠牌玩家的出牌顺序开始继续进行游戏。
+                            （杠牌后的奖励规则详见“计分规则” -> “刮风下雨”）
+                            [另注：牌墙中的最后一章牌不可被杠牌，因为没有下一章牌可供补牌]
+                        </div>
+                        <div className="mahjong-list-item-en">Kong action: When a player:
+                            (1) has a triplet (three identical tiles) in hand, and another player discards the
+                            fourth tile of the same kind, the player can choose to “Kong” (called Exposed Kong). The
+                            Konged tiles must be shown on the table and cannot be taken back to the hand. After Kong
+                            action, the player must draw a tile from the wall in the direction of the draw, and the
+                            game continues with the player who Konged the tile.
+                            (2) has four identical tiles in hand, the player can choose to “Kong” (called Concealed
+                            Kong). The Konged tiles must be shown on the table and cannot be taken back to the hand.
+                            After Kong action, the player must draw a tile from the wall in the direction of the draw,
+                            and the game continues with the player who Konged the tile.
+                            (3) draws a tile that completes a concealed Pong, the player can choose to “Kong” (called
+                            Supplemented Kong). The Konged tiles must be added to the Ponged tiles and shown on the table and
+                            cannot be taken back to the hand. After Kong action, the player must draw a tile from the
+                            wall in the direction of the draw, and the game continues with the player who Konged the
+                            tile.
+                            (The reward after Kong action are detailed in "Scoring Rules" -> "King Kongs")
+                            [Note: The last tile in the wall cannot be Konged, because there is no next tile to draw]
                         </div>
                     </li>
                     <br></br>
@@ -156,6 +189,27 @@ function BasicRules() {
                             hand and void suit: the player who cannot Ready hand must pay the maximum possible
                             points to the player who can Ready hand, the player who still has the void suit must pay
                             four points to all other players.
+                        </div>
+                    </li>
+                    <br></br>
+                    <li className="mahjong-list-item">
+                        <div
+                            className="mahjong-list-item-cn">放胡：当一名玩家能够胡牌（不论点炮或自摸）时主动放弃本次胡牌机会，称为放胡，被放胡的牌在接下来的一圈（即四位玩家的各一回合）中不可再被该玩家喊胡。
+                        </div>
+                        <div className="mahjong-list-item-en">Cancel Win: When a player can win (either by discard or
+                            self-drawn) but choose to cancel the win, it is called Cancel Win, the tile that has been
+                            Cancel Win cannot be won by the player in the next round (one turn for each player).
+                        </div>
+                    </li>
+                    <br></br>
+                    <li className="mahjong-list-item">
+                        <div
+                            className="mahjong-list-item-cn">胡绝张：当一名玩家打出的牌已为第四章（通过牌池及碰牌队列中得知），其他玩家若能够胡这张牌，须立即喊胡，不允许放胡，违规玩家在进入流局查叫阶段后失去获得赔偿的权利。
+                        </div>
+                        <div className="mahjong-list-item-en">Winning on the last tile: When a player discards the last
+                            tile (can be known from the discard pool and Pong queue), if other players can win on
+                            this tile, they must declare win immediately, not allow to cancel the win, the player
+                            who violates the rule will lose the right to compensation in the drawn checking stage.
                         </div>
                     </li>
                     <br></br>

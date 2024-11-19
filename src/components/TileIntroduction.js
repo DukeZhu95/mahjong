@@ -34,22 +34,22 @@ function TileIntroduction() {
             number: 1,
             image: MJw1Image,
             nameCN: "一万",
-            nameEN: "One of Characters",
+            nameEN: "One Characters",
             description: "一万代表数字1，是万子牌中最小的一张。"
         },
-        {number: 2, image: MJw2Image, nameCN: "二万", nameEN: "Two of Characters", description: "二万代表数字2。"},
+        {number: 2, image: MJw2Image, nameCN: "二万", nameEN: "Two Characters", description: "二万代表数字2。"},
         // ... 其他万子牌
-        {number: 3, image: MJw3Image, nameCN: "三万", nameEN: "Three of Characters", description: "三万代表数字3。"},
-        {number: 4, image: MJw4Image, nameCN: "四万", nameEN: "Four of Characters", description: "四万代表数字4。"},
-        {number: 5, image: MJw5Image, nameCN: "五万", nameEN: "Five of Characters", description: "五万代表数字5。"},
-        {number: 6, image: MJw6Image, nameCN: "六万", nameEN: "Six of Characters", description: "六万代表数字6。"},
-        {number: 7, image: MJw7Image, nameCN: "七万", nameEN: "Seven of Characters", description: "七万代表数字7。"},
-        {number: 8, image: MJw8Image, nameCN: "八万", nameEN: "Eight of Characters", description: "八万代表数字8。"},
+        {number: 3, image: MJw3Image, nameCN: "三万", nameEN: "Three Characters", description: "三万代表数字3。"},
+        {number: 4, image: MJw4Image, nameCN: "四万", nameEN: "Four Characters", description: "四万代表数字4。"},
+        {number: 5, image: MJw5Image, nameCN: "五万", nameEN: "Five Characters", description: "五万代表数字5。"},
+        {number: 6, image: MJw6Image, nameCN: "六万", nameEN: "Six Characters", description: "六万代表数字6。"},
+        {number: 7, image: MJw7Image, nameCN: "七万", nameEN: "Seven Characters", description: "七万代表数字7。"},
+        {number: 8, image: MJw8Image, nameCN: "八万", nameEN: "Eight Characters", description: "八万代表数字8。"},
         {
             number: 9,
             image: MJw9Image,
             nameCN: "九万",
-            nameEN: "Nine of Characters",
+            nameEN: "Nine Characters",
             description: "九万代表数字9，是万子牌中最大的一张。"
         },
     ];
@@ -59,49 +59,49 @@ function TileIntroduction() {
             number: 1,
             image: MJS1Image,
             nameCN: "一条",
-            nameEN: "One of Stipe/Bamboo",
+            nameEN: "One Stipe/Bamboo",
             description: "一条通常用一只孔雀表示。"
         },
-        {number: 2, image: MJS2Image, nameCN: "二条", nameEN: "Two of Stipe/Bamboo", description: "二条显示两根竹子。"},
+        {number: 2, image: MJS2Image, nameCN: "二条", nameEN: "Two Stipe/Bamboo", description: "二条显示两根竹子。"},
         // ... 其他条子牌
         {
             number: 3,
             image: MJS3Image,
             nameCN: "三条",
-            nameEN: "Three of Stipe/Bamboo",
+            nameEN: "Three Stipe/Bamboo",
             description: "三条显示三根竹子。"
         },
-        {number: 4, image: MJS4Image, nameCN: "四条", nameEN: "Four of Stipe/Bamboo", description: "四条显示四根竹子。"},
-        {number: 5, image: MJS5Image, nameCN: "五条", nameEN: "Five of Stipe/Bamboo", description: "五条显示五根竹子。"},
-        {number: 6, image: MJS6Image, nameCN: "六条", nameEN: "Six of Stipe/Bamboo", description: "六条显示六根竹子。"},
+        {number: 4, image: MJS4Image, nameCN: "四条", nameEN: "Four Stipe/Bamboo", description: "四条显示四根竹子。"},
+        {number: 5, image: MJS5Image, nameCN: "五条", nameEN: "Five Stipe/Bamboo", description: "五条显示五根竹子。"},
+        {number: 6, image: MJS6Image, nameCN: "六条", nameEN: "Six Stipe/Bamboo", description: "六条显示六根竹子。"},
         {
             number: 7,
             image: MJS7Image,
             nameCN: "七条",
-            nameEN: "Seven of Stipe/Bamboo",
+            nameEN: "Seven Stipe/Bamboo",
             description: "七条显示七根竹子。"
         },
         {
             number: 8,
             image: MJS8Image,
             nameCN: "八条",
-            nameEN: "Eight of Stipe/Bamboo",
+            nameEN: "Eight Stipe/Bamboo",
             description: "八条显示八根竹子。"
         },
-        {number: 9, image: MJS9Image, nameCN: "九条", nameEN: "Nine of Stipe/Bamboo", description: "九条显示九根竹子。"},
+        {number: 9, image: MJS9Image, nameCN: "九条", nameEN: "Nine Stipe/Bamboo", description: "九条显示九根竹子。"},
     ];
 
     const dots = [
-        {number: 1, image: MJt1Image, nameCN: "一筒", nameEN: "One of Dots", description: "一筒显示一个圆点。"},
-        {number: 2, image: MJt2Image, nameCN: "二筒", nameEN: "Two of Dots", description: "二筒显示两个圆点。"},
+        {number: 1, image: MJt1Image, nameCN: "一筒", nameEN: "One Dots", description: "一筒显示一个圆点。"},
+        {number: 2, image: MJt2Image, nameCN: "二筒", nameEN: "Two Dots", description: "二筒显示两个圆点。"},
         // ... 其他筒子牌
-        {number: 3, image: MJt3Image, nameCN: "三筒", nameEN: "Three of Dots", description: "三筒显示三个圆点。"},
-        {number: 4, image: MJt4Image, nameCN: "四筒", nameEN: "Four of Dots", description: "四筒显示四个圆点。"},
-        {number: 5, image: MJt5Image, nameCN: "五筒", nameEN: "Five of Dots", description: "五筒显示五个圆点。"},
-        {number: 6, image: MJt6Image, nameCN: "六筒", nameEN: "Six of Dots", description: "六筒显示六个圆点。"},
-        {number: 7, image: MJt7Image, nameCN: "七筒", nameEN: "Seven of Dots", description: "七筒显示七个圆点。"},
-        {number: 8, image: MJt8Image, nameCN: "八筒", nameEN: "Eight of Dots", description: "八筒显示八个圆点。"},
-        {number: 9, image: MJt9Image, nameCN: "九筒", nameEN: "Nine of Dots", description: "九筒显示九个圆点。"},
+        {number: 3, image: MJt3Image, nameCN: "三筒", nameEN: "Three Dots", description: "三筒显示三个圆点。"},
+        {number: 4, image: MJt4Image, nameCN: "四筒", nameEN: "Four Dots", description: "四筒显示四个圆点。"},
+        {number: 5, image: MJt5Image, nameCN: "五筒", nameEN: "Five Dots", description: "五筒显示五个圆点。"},
+        {number: 6, image: MJt6Image, nameCN: "六筒", nameEN: "Six Dots", description: "六筒显示六个圆点。"},
+        {number: 7, image: MJt7Image, nameCN: "七筒", nameEN: "Seven Dots", description: "七筒显示七个圆点。"},
+        {number: 8, image: MJt8Image, nameCN: "八筒", nameEN: "Eight Dots", description: "八筒显示八个圆点。"},
+        {number: 9, image: MJt9Image, nameCN: "九筒", nameEN: "Nine Dots", description: "九筒显示九个圆点。"},
     ];
 
     return (

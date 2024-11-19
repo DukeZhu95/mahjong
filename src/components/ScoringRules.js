@@ -1,5 +1,6 @@
 import React from 'react';
 import chipsImage from "../Images/chips.png";
+import comicsImage from "../Images/comics.png";
 
 function ScoringRules() {
     return (
@@ -84,11 +85,13 @@ function ScoringRules() {
                     </li>
                 </ul>
 
+                <img src={comicsImage} alt="四川麻将" className="mahjong-image"/>
+
                 <div className="mahjong-subheading">
                     <div
                         className="mahjong-list-item-cn">*刮风下雨：四川麻将的特色玩法，即当有玩家杠牌时，其他玩家须按照杠牌的形式计算番数并立刻结算
                     </div>
-                    <div className="mahjong-list-item-en">*Special points calculating method in Sichuan Mahjong, when
+                    <div className="mahjong-list-item-en">*King Kongs: Special points calculating method in Sichuan Mahjong, when
                         a player Konged, other players must calculate the points according to the type of Kong and
                         settle immediately.
                     </div>

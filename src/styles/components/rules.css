@@ -15,10 +15,14 @@
     --english-subtitle-font: "SlabRoboto ";
 
     /* 添加英文文本的字体粗细和大小变量 */
-    --english-title-weight: 700;  /* 标题粗体 */
-    --english-text-weight: 600;   /* 正文粗体 */
+    /*--english-title-weight: 700;  !* 标题粗体 *!*/
+    /*--english-text-weight: 600;   !* 正文粗体 *!*/
     --english-title-size: 1.3em;  /* 标题字号 */
     --english-text-size: 1.2em;   /* 正文字号 */
+}
+
+html {
+    scroll-behavior: smooth;  /* 添加平滑滚动 */
 }
 
 /* 首页样式 */
@@ -62,17 +66,98 @@
     font-style: italic;
 }
 
+/* 导航容器 */
+.nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Home按钮样式 */
+.nav-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;  /* 居中并添加底部间距 */
+    border-radius: 50%;
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-home:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(178, 34, 34, 0.2);
+}
+
+/* 菜单按钮 */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #8b1a1a;
+}
+
 /* 顶部导航栏样式 */
 .main-nav {
-    background: white;
-    padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+    /*display: flex;*/
+    flex-direction: column;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.main-nav.nav-open {
+    right: 0;
+}
+
+/* 自定义滚动条样式 */
+.main-nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main-nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.main-nav::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.main-nav::-webkit-scrollbar-thumb:hover {
+    background: #8b1a1a;
 }
 
 .nav-logo {
@@ -90,13 +175,17 @@
 }
 
 .nav-buttons {
+    margin-top: 0;  /* 移除之前可能存在的顶部间距 */
     display: flex;
+    flex-direction: column;  /* 改为纵向排列 */
     gap: 15px;
+    width: 100%;  /* 确保按钮占满宽度 */
 }
 
 .nav-button {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
@@ -118,7 +207,7 @@
 
 .button-text {
     font-family: var(--english-title-font);
-    font-weight: var(--english-title-weight);
+    /*font-weight: var(--english-title-weight);*/
     font-size: 1.1em;
 }
 
@@ -145,11 +234,49 @@
     background-color: rgba(178, 34, 34, 0.1);
 }
 
+/* 添加遮罩层样式 */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 导航菜单底部图片容器 */
+.nav-footer {
+    margin-top: auto;  /* 将图片推到底部 */
+    padding: 20px;
+    text-align: center;
+}
+
+/* 底部图片样式 */
+.nav-footer-image {
+    max-width: 80%;  /* 控制图片大小 */
+    height: auto;
+    opacity: 0.8;  /* 稍微降低不透明度使其不那么显眼 */
+    transition: opacity 0.3s ease;
+}
+
+.nav-footer-image:hover {
+    opacity: 1;
+}
+
 /* 基础容器样式 */
 .mahjong-rules {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 40px;  /* 增加内边距 */
+    margin: 80px auto 20px;  /* 增加顶部边距，避免被导航按钮遮挡 */
+    padding: 40px;
     background-color: var(--container-background);
     box-shadow: 0 0 10px var(--shadow-color);
 }
@@ -184,7 +311,7 @@
 .mahjong-title-en {
     font-family: var(--english-title-font);
     font-size: var(--english-title-size);
-    font-weight: var(--english-title-weight);
+    /*font-weight: var(--english-title-weight);*/
     color: var(--secondary-text-color);
 }
 
@@ -208,7 +335,7 @@
 .mahjong-subtitle-en {
     font-family: var(--english-subtitle-font);
     font-size: var(--english-text-size);
-    font-weight: var(--english-text-weight);
+    /*font-weight: var(--english-text-weight);*/
     color: var(--secondary-text-color);
     margin-top: 5px;
 }
@@ -252,7 +379,7 @@
     font-family: var(--english-text-font);
     font-style: italic;
     font-size: var(--english-text-size);
-    font-weight: var(--english-text-weight);
+    /*font-weight: var(--english-text-weight);*/
     color: var(--secondary-text-color);
     margin-top: 5px;
 }
@@ -391,7 +518,7 @@
     font-family: var(--english-text-font);
     /*font-style: italic;*/
     font-size: var(--english-text-size);
-    font-weight: var(--english-text-weight);
+    /*font-weight: var(--english-text-weight);*/
     color: var(--secondary-text-color);
     margin-bottom: 8px;
 }
@@ -404,9 +531,13 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .menu-button {
+        top: 10px;
+        right: 10px;
+    }
+
     .main-nav {
-        flex-direction: column;
-        padding: 10px;
+        padding: 60px 15px 15px;  /* 调整导航菜单内边距 */
     }
 
     .nav-buttons {
@@ -432,8 +563,16 @@
         margin-top: 10px;
     }
 
+    .nav-footer-image {
+        max-width: 60%;  /* 在移动端稍微缩小图片 */
+    }
+
     .home-nav {
         grid-template-columns: 1fr;
+    }
+
+    .mahjong-content {
+        padding: 0 10px;  /* 减小移动端内边距 */
     }
 
     .mahjong-rules {
@@ -490,5 +629,16 @@
 
     .tile-name-en {
         font-size: 0.9em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #ff4444;
+        --text-color: #e0e0e0;
+        --secondary-text-color: #b0b0b0;
+        --background-color: #1a1a1a;
+        --container-background: #2d2d2d;
+        --shadow-color: rgba(0, 0, 0, 0.3);
     }
 }

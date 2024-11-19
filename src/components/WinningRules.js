@@ -16,6 +16,7 @@ import FourKongs from "../fourKongs";
 import SevenShiftedPairs from "../sevenShiftedPairs";
 import NineGates from "../nineGates";
 import table3Image from "../Images/table3.png";
+import shuffleImage from "../Images/shuffle.png";
 
 function WinningRules() {
     return (
@@ -139,6 +140,8 @@ function WinningRules() {
                     </li>
                     <br></br>
                 </ul>
+
+                <img src={shuffleImage} alt="四川麻将" className="mahjong-image"/>
 
                 <p>
                     <span className="chinese-text">以下为极品牌型，一般情况下一律按封顶番数计算：</span>
