@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/mahjong/static/css/main.a91a94ad.css",
-    "main.js": "/mahjong/static/js/main.66d50116.js",
+    "main.css": "/mahjong/static/css/main.3efe2e4e.css",
+    "main.js": "/mahjong/static/js/main.7f412dd8.js",
     "static/js/453.8214c2f8.chunk.js": "/mahjong/static/js/453.8214c2f8.chunk.js",
-    "static/media/Dices.png": "/mahjong/static/media/Dices.7256c130d1123b7674e6.png",
+    "static/media/chips.png": "/mahjong/static/media/chips.cc4fceee84a059e9660f.png",
+    "static/media/table3.png": "/mahjong/static/media/table3.d41e029c43e8cefef9a0.png",
+    "static/media/table.png": "/mahjong/static/media/table.867dd1ee27ea7a0d4a4d.png",
+    "static/media/mahjong.png": "/mahjong/static/media/mahjong.177920331a9dbf778d21.png",
+    "static/media/catch.png": "/mahjong/static/media/catch.7e4f96e5fec6be26dc92.png",
     "static/media/MJs1.png": "/mahjong/static/media/MJs1.f43c2d6fc0f425c78817.png",
     "static/media/MJt9.png": "/mahjong/static/media/MJt9.c186634f9eee3cff4e13.png",
     "static/media/MJt1.png": "/mahjong/static/media/MJt1.f95e9312ebd5c60a0ab6.png",
@@ -14,12 +18,12 @@
     "static/media/MJs9.png": "/mahjong/static/media/MJs9.90d028cfc113d63d8e59.png",
     "static/media/MJt8.png": "/mahjong/static/media/MJt8.ae209f6c613cc459f75b.png",
     "index.html": "/mahjong/index.html",
-    "main.a91a94ad.css.map": "/mahjong/static/css/main.a91a94ad.css.map",
-    "main.66d50116.js.map": "/mahjong/static/js/main.66d50116.js.map",
+    "main.3efe2e4e.css.map": "/mahjong/static/css/main.3efe2e4e.css.map",
+    "main.7f412dd8.js.map": "/mahjong/static/js/main.7f412dd8.js.map",
     "453.8214c2f8.chunk.js.map": "/mahjong/static/js/453.8214c2f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a91a94ad.css",
-    "static/js/main.66d50116.js"
+    "static/css/main.3efe2e4e.css",
+    "static/js/main.7f412dd8.js"
   ]
 }
