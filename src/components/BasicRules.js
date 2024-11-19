@@ -2,6 +2,7 @@ import React from 'react';
 import Example1 from "../example1";
 import Example2 from "../example2";
 import catchImage from "../Images/catch.png";
+import dicesImage from "../Images/white_dice.png";
 
 function BasicRules() {
     return (
@@ -42,7 +43,8 @@ function BasicRules() {
                     <li className="mahjong-list-item">
                         <div className="mahjong-list-item-cn">缺一门：每个玩家需要选择放弃一门花色，不能胡这一门的牌。
                         </div>
-                        <div className="mahjong-list-item-en">One void suit: Each player needs to select a "forbidden suit" to
+                        <div className="mahjong-list-item-en">One void suit: Each player needs to select a "forbidden
+                            suit" to
                             abandon in one round, this suit cannot be included when wins.
                         </div>
                     </li>
@@ -98,7 +100,8 @@ function BasicRules() {
                             After Kong action, the player must draw a tile from the wall in the direction of the draw,
                             and the game continues with the player who Konged the tile.
                             (3) draws a tile that completes a concealed Pong, the player can choose to “Kong” (called
-                            Supplemented Kong). The Konged tiles must be added to the Ponged tiles and shown on the table and
+                            Supplemented Kong). The Konged tiles must be added to the Ponged tiles and shown on the
+                            table and
                             cannot be taken back to the hand. After Kong action, the player must draw a tile from the
                             wall in the direction of the draw, and the game continues with the player who Konged the
                             tile.
@@ -225,8 +228,9 @@ function BasicRules() {
                         </div>
                     </li>
                 </ul>
-
             </div>
+
+            <img src={dicesImage} alt="麻将牌" className="mahjong-image"/>
         </div>
     );
 }

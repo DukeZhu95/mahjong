@@ -27,6 +27,7 @@ import MJw7Image from '../Images/MJw7.png';
 import MJw8Image from '../Images/MJw8.png';
 import MJw9Image from '../Images/MJw9.png';
 import mahjongImage from "../Images/mahjong.png";
+import dicesImage from "../Images/black_dice.png";
 
 function TileIntroduction() {
     const characters = [
@@ -115,86 +116,91 @@ function TileIntroduction() {
 
             <div className="mahjong-description">
                 <div className="mahjong-list-item">
-                    <div className="mahjong-list-item-cn">*游戏共使用108张牌，不包括风牌、箭牌和花牌，仅包含筒、条、万三种花色。</div>
-                    <div className="mahjong-list-item-en">*The game using 108 tiles in total, not includes Winds, Dragons and
+                    <div
+                        className="mahjong-list-item-cn">*游戏共使用108张牌，不包括风牌、箭牌和花牌，仅包含筒、条、万三种花色。
+                    </div>
+                    <div className="mahjong-list-item-en">*The game using 108 tiles in total, not includes Winds,
+                        Dragons and
                         Flowers, only includes 3 suits named Characters, Stipes(Bamboos) and Dots.
                     </div>
                 </div>
             </div>
 
-                <div className="mahjong-content">
-                    <section className="tiles-section">
-                        <h3 className="tiles-category">
-                            <span className="category-cn">万子牌</span>
-                            <span className="category-en">Characters</span>
-                        </h3>
-                        <div className="tiles-grid">
-                            {characters.map((tile) => (
-                                <div key={tile.nameCN} className="tile-item">
-                                    <img
-                                        src={tile.image}
-                                        alt={tile.nameCN}
-                                        className="tile-image"
-                                    />
-                                    <div className="tile-info">
-                                        <div className="tile-name-cn">{tile.nameCN}</div>
-                                        <div className="tile-name-en">{tile.nameEN}</div>
-                                        <div className="tile-description">{tile.description}</div>
-                                    </div>
+            <div className="mahjong-content">
+                <section className="tiles-section">
+                    <h3 className="tiles-category">
+                        <span className="category-cn">万子牌</span>
+                        <span className="category-en">Characters</span>
+                    </h3>
+                    <div className="tiles-grid">
+                        {characters.map((tile) => (
+                            <div key={tile.nameCN} className="tile-item">
+                                <img
+                                    src={tile.image}
+                                    alt={tile.nameCN}
+                                    className="tile-image"
+                                />
+                                <div className="tile-info">
+                                    <div className="tile-name-cn">{tile.nameCN}</div>
+                                    <div className="tile-name-en">{tile.nameEN}</div>
+                                    <div className="tile-description">{tile.description}</div>
                                 </div>
-                            ))}
-                        </div>
-                    </section>
+                            </div>
+                        ))}
+                    </div>
+                </section>
 
-                    {/* 类似的部分用于条子和筒子 */}
-                    <section className="tiles-section">
-                        <h3 className="tiles-category">
-                            <span className="category-cn">条子牌</span>
-                            <span className="category-en">Stipe/Bamboo</span>
-                        </h3>
-                        <div className="tiles-grid">
-                            {stipe.map((tile) => (
-                                <div key={tile.nameCN} className="tile-item">
-                                    <img
-                                        src={tile.image}
-                                        alt={tile.nameCN}
-                                        className="tile-image"
-                                    />
-                                    <div className="tile-info">
-                                        <div className="tile-name-cn">{tile.nameCN}</div>
-                                        <div className="tile-name-en">{tile.nameEN}</div>
-                                        <div className="tile-description">{tile.description}</div>
-                                    </div>
+                {/* 类似的部分用于条子和筒子 */}
+                <section className="tiles-section">
+                    <h3 className="tiles-category">
+                        <span className="category-cn">条子牌</span>
+                        <span className="category-en">Stipe/Bamboo</span>
+                    </h3>
+                    <div className="tiles-grid">
+                        {stipe.map((tile) => (
+                            <div key={tile.nameCN} className="tile-item">
+                                <img
+                                    src={tile.image}
+                                    alt={tile.nameCN}
+                                    className="tile-image"
+                                />
+                                <div className="tile-info">
+                                    <div className="tile-name-cn">{tile.nameCN}</div>
+                                    <div className="tile-name-en">{tile.nameEN}</div>
+                                    <div className="tile-description">{tile.description}</div>
                                 </div>
-                            ))}
-                        </div>
-                    </section>
+                            </div>
+                        ))}
+                    </div>
+                </section>
 
-                    <section className="tiles-section">
-                        <h3 className="tiles-category">
-                            <span className="category-cn">筒子牌</span>
-                            <span className="category-en">Dots</span>
-                        </h3>
-                        <div className="tiles-grid">
-                            {dots.map((tile) => (
-                                <div key={tile.nameCN} className="tile-item">
-                                    <img
-                                        src={tile.image}
-                                        alt={tile.nameCN}
-                                        className="tile-image"
-                                    />
-                                    <div className="tile-info">
-                                        <div className="tile-name-cn">{tile.nameCN}</div>
-                                        <div className="tile-name-en">{tile.nameEN}</div>
-                                        <div className="tile-description">{tile.description}</div>
-                                    </div>
+                <section className="tiles-section">
+                    <h3 className="tiles-category">
+                        <span className="category-cn">筒子牌</span>
+                        <span className="category-en">Dots</span>
+                    </h3>
+                    <div className="tiles-grid">
+                        {dots.map((tile) => (
+                            <div key={tile.nameCN} className="tile-item">
+                                <img
+                                    src={tile.image}
+                                    alt={tile.nameCN}
+                                    className="tile-image"
+                                />
+                                <div className="tile-info">
+                                    <div className="tile-name-cn">{tile.nameCN}</div>
+                                    <div className="tile-name-en">{tile.nameEN}</div>
+                                    <div className="tile-description">{tile.description}</div>
                                 </div>
-                            ))}
-                        </div>
-                    </section>
-                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
-            );
-            }
 
-            export default TileIntroduction;
+            <img src={dicesImage} alt="麻将牌" className="mahjong-image"/>
+        </div>
+    );
+}
+
+export default TileIntroduction;

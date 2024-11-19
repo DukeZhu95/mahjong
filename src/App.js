@@ -51,7 +51,7 @@ function Navigation() {
                 {/* 添加底部图片 */}
                 <div className="nav-footer">
                     <img
-                        src={require('./Images/red_dice.png')} // 使用您已有的图片
+                        src={require('./Images/table2.png')} // 使用您已有的图片
                         alt="Mahjong"
                         className="nav-footer-image"
                     />

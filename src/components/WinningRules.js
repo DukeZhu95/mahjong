@@ -17,6 +17,7 @@ import SevenShiftedPairs from "../sevenShiftedPairs";
 import NineGates from "../nineGates";
 import table3Image from "../Images/table3.png";
 import shuffleImage from "../Images/shuffle.png";
+import dicesImage from "../Images/dice_number.png";
 
 function WinningRules() {
     return (
@@ -237,6 +238,8 @@ function WinningRules() {
                     <br></br>
                 </ul>
             </div>
+
+            <img src={dicesImage} alt="麻将牌" className="mahjong-image"/>
         </div>
     );
 }
